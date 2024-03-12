@@ -1,0 +1,26 @@
+
+        <h1>socketChat</h1>
+        <form>
+            <input type="text" id="textInput" name="textInput" />
+        </form>
+        <br />
+        <button id="submitButton" onclick="buttonClicked()">Send</button>
+        <script src="/socket.io/socket.io.js"></script>
+        <script>
+            var socket = io.connect();
+
+            $("#textInput").keydown(function (event) {
+                if (event.keyCode == 13) {
+                    event.preventDefault();
+                    buttonClicked();
+                }
+            });
+
+            function buttonClicked() {
+                socket.emit("clicked", $("#textInput").val());
+            }
+
+            socket.on("message", function (data) {
+                console.log(data);
+            });
+        </script>

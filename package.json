@@ -1,0 +1,18 @@
+{
+  "name": "socket-example",
+  "version": "1.0.0",
+  "description": "Demo socket.io project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Andrew Errity",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.2",
+    "express-handlebars": "^7.1.2",
+    "hbs": "^4.2.0",
+    "jquery": "^3.7.1",
+    "socket.io": "^1.7.3"
+  }
+}
