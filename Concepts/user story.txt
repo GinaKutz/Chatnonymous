@@ -1,0 +1,16 @@
+AS A user 
+I WANT all my messages and data to delete upon closing the site
+SO THAT my message data can be kept private
+
+WHEN I enter the site
+THEN I am presented with a homepage in which I can enter my login information or make an account
+WHEN I click start
+THEN I am presented with a list of chatrooms
+WHEN I click a chatroom
+THEN I am presented with a blank chat
+WHEN I send a message
+THEN everyone in the chat sees it
+WHEN another user sends a message
+THEN I see the message with everyone else
+WHEN I close the webpage
+THEN no data of the chat is stored anywhere
