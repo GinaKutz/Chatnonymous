@@ -1,0 +1,6 @@
+<ul id="chatList"></ul>
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+    var socket = io.connect(); socket.on("message", function (data) {
+    $("#chatList").append(`<li>${data}</li>`); });
+</script>

@@ -11,9 +11,11 @@
     </head>
     <body>
         <h1 id="chatLabel">socketChat</h1>
-        <ul id="chatList">
-
-        </ul>
-        <script src="../public/js/index.js"></script>
+        <ul id="chatList"></ul>
+        <script type="text/javascript">
+            socket.on("message", function (data) {
+                $("#chatList").append(`<li>${data}</li>`);
+            });
+        </script>
     </body>
 </html>
