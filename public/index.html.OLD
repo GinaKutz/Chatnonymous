@@ -11,7 +11,9 @@
     </head>
     <body>
         <h1 id="chatLabel">socketChat</h1>
-        <ul id="chatList"></ul>
+        <ul id="chatList">
+
+        </ul>
         <script src="../public/js/index.js"></script>
     </body>
 </html>
