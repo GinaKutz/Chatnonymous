@@ -9,11 +9,16 @@
   "author": "Andrew Errity",
   "license": "ISC",
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "connect-session-sequelize": "^7.0.4",
     "dotenv": "^16.4.5",
     "express": "^4.15.2",
     "express-handlebars": "^7.1.2",
-    "hbs": "^4.2.0",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.6",
     "jquery": "^3.7.1",
-    "socket.io": "^1.7.3"
+    "socket.io": "^1.7.3",
+    "mysql2": "^2.2.5",
+    "sequelize": "^6.3.5"
   }
 }
