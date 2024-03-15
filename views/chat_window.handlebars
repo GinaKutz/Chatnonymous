@@ -1,0 +1,38 @@
+<ul id="chatList"></ul>
+
+<form id="form" action="">
+    <button id="submitButton" onclick="buttonClicked()">Send</button>
+    <input type="text" id="textInput" name="textInput" />
+</form>
+
+<div id="sidebar">
+    <button>
+        TEST BUTTON
+    </button>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script type="text/javascript">
+
+    var socket = io.connect(); 
+    socket.on("message", function (data) {
+    $("#chatList").append(`<li>${data}</li>`); });
+
+    $("#textInput").keydown(function (event) {
+        if (event.keyCode == 13) {
+            event.preventDefault();
+            buttonClicked();
+        }
+    });
+
+    function buttonClicked() {
+        if ($("#textInput").val()) {
+            socket.emit("clicked", $("#textInput").val());
+            $("#textInput").val("")
+        }
+    }
+
+    socket.on("message", function (data) {
+        console.log(data);
+    });
+</script>

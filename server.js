@@ -48,10 +48,10 @@ io.on("connection", function (client) {
     });
 });
 
-//start server
-server.listen(PORT, function () {
-    console.log("listening on http://localhost:3000");
-});
+// //start server
+// server.listen(PORT, function () {
+//     console.log(`listening on http://localhost:${PORT}`);
+// });
 
 sequelize.sync({ force: false }).then(() => {
     app.listen(PORT, () => console.log('Now listening (sequelize)'));

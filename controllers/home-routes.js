@@ -4,7 +4,7 @@ const { Gallery, Painting } = require('../models');
 const withAuth = require('../utils/auth');
 
 // Display login or chat page
-router.get('/', withAuth, async (req, res) => {
+router.get('/', async (req, res) => {
 
   res.render('chat_window', {
     loggedIn: req.session.loggedIn,
