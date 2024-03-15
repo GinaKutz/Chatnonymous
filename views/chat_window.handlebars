@@ -1,3 +1,5 @@
+<ul id="chatList"></ul>
+
 <form id="form" action="">
     <button id="submitButton" onclick="buttonClicked()">Send</button>
     <input type="text" id="textInput" name="textInput" />
@@ -9,10 +11,12 @@
     </button>
 </div>
 
-<br />
 <script src="/socket.io/socket.io.js"></script>
-<script>
-    var socket = io.connect();
+<script type="text/javascript">
+
+    var socket = io.connect(); 
+    socket.on("message", function (data) {
+    $("#chatList").append(`<li>${data}</li>`); });
 
     $("#textInput").keydown(function (event) {
         if (event.keyCode == 13) {
