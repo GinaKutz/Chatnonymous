@@ -8,7 +8,7 @@ const sequelize = require('./config/connection');
 const helpers = require('./utils/helpers');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 3002;
 
 
 const sess = {
@@ -17,9 +17,9 @@ const sess = {
     resave: false,
     saveUninitialized: true,
     store: new SequelizeStore({
-      db: sequelize,
+        db: sequelize,
     }),
-  };
+};
 
 app.use(session(sess));
 
@@ -48,11 +48,11 @@ io.on("connection", function (client) {
     });
 });
 
-// //start server
-// server.listen(PORT, function () {
-//     console.log(`listening on http://localhost:${PORT}`);
-// });
+//start server
+
 
 sequelize.sync({ force: false }).then(() => {
-    app.listen(PORT, () => console.log('Now listening (sequelize)'));
+    server.listen(PORT, function () {
+        console.log(`listening on http://localhost:${PORT}`);
+    });
 });
