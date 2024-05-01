@@ -1,6 +1,6 @@
 # Chatnonymous
 
-Welcome to our Project Two! This application is inteneded to facilitate the exchange of messages between different users in temporary chat rooms. This application will feature chat rooms that are set to self destruct after the final user exits the room. User name and password will be stored in a database so they can be accessed anywhere.
+Welcome to our Project Three! This application is inteneded to facilitate the exchange of messages between different users in temporary chat rooms. This application will feature chat rooms that are set to self destruct after the final user exits the room. The chat is not persistent and is only accessible to the users that are in the room at the time of sending. User name and password will be stored in a database so they can be accessed anywhere.
 
 TODO:
 
@@ -12,14 +12,18 @@ TODO:
 -   HTML
 -   CSS
 -   Javascript
+-   React
 -   Bootstrap
 -   Node.js
--   MySQL
--   Sequelize
--   handlebars
+-   MongoDB
+-   Mongoose
 -   Socket.IO
 
-The basic chatroom structure is built in HTML and joined using Handlebars to make dynamic pages that can be used in different pages. CSS styling is accomplished with the use of Boostrap. Node.js is the heart of the server, making use of socket.IO for the chat. MySQL and Sequalize handle reading and writing of data to the database.
+The basic chatroom structure is built with React to make pages dynamic and reusable. CSS styling is accomplished with the use of Boostrap. Node.js is the heart of the server, making use of socket.IO for the chat. MongoDB and Mongoose handle reading and writing of user account information to the database, such as-
+
+- Usernames
+- Passwords
+- Friends lists
 
 ### Project Contributors
 
